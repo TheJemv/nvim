@@ -4,40 +4,38 @@
 
 > **TL;DR**
 > Mi configuración de **Neovim 0.9+** usa [**lazy.nvim**](https://github.com/folke/lazy.nvim) como gestor de *plugins* y un pequeño puñado de módulos Lua hechos por mí.
-> Clona este repo y tendrás un entorno listo para programar en menos de un minuto.
 
 ---
 
 ## 📂 Estructura
 
 ```text
-.config/
-└─ nvim/
-   ├─ init.lua               -- Punto de entrada: carga lazy.nvim y los módulos
-   ├─ lazy‑lock.json         -- "lockfile" con las versiones exactas de plugins
-   ├─ lua/
-   │  ├─ vim‑options.lua     -- Opciones básicas + atajos globales
-   │  ├─ plugins.lua         -- Registro central para lazy.nvim (opcional)
-   │  └─ plugins/            -- Un plugin por archivo ↓
-   │     ├─ alpha.lua        -- Pantalla de inicio
-   │     ├─ bufferline.lua   -- Tabs tipo VS Code
-   │     ├─ catppuccin.lua   -- Tema (alterno: onedark)
-   │     ├─ completions.lua  -- nvim‑cmp + luasnip
-   │     ├─ lsp‑config.lua   -- mason + lspconfig + capacidades CMP
-   │     ├─ lualine.lua      -- Barra de estado
-   │     ├─ neo‑tree.lua     -- Explorador de archivos
-   │     ├─ none‑ls.lua      -- null‑ls (formatters / linters)
-   │     ├─ nvim‑autopairs.lua
-   │     ├─ telescope.lua    -- Fuzzy Finder
-   │     └─ treesitter.lua   -- Syntax Highlight ++
-   └─ README.md              -- Este archivo (referencia rápida)
+nvim/
+├─ init.lua               -- Punto de entrada: carga lazy.nvim y los módulos
+├─ lazy‑lock.json         -- "lockfile" con las versiones exactas de plugins
+├─ lua/
+│  ├─ vim‑options.lua     -- Opciones básicas + atajos globales
+│  ├─ plugins.lua         -- Registro central para lazy.nvim (opcional)
+│  └─ plugins/            -- Un plugin por archivo ↓
+│     ├─ alpha.lua        -- Pantalla de inicio
+│     ├─ bufferline.lua   -- Tabs tipo VS Code
+│     ├─ catppuccin.lua   -- Tema (alterno: onedark)
+│     ├─ completions.lua  -- nvim‑cmp + luasnip
+│     ├─ lsp‑config.lua   -- mason + lspconfig + capacidades CMP
+│     ├─ lualine.lua      -- Barra de estado
+│     ├─ neo‑tree.lua     -- Explorador de archivos
+│     ├─ none‑ls.lua      -- null‑ls (formatters / linters)
+│     ├─ nvim‑autopairs.lua
+│     ├─ telescope.lua    -- Fuzzy Finder
+│     └─ treesitter.lua   -- Syntax Highlight ++
+└─ README.md              -- Este archivo (referencia rápida)
 ```
 
 ## 🚀 Instalación rápida
 
 ```bash
 # 1. Clona el repositorio dentro de tu $HOME
-$ git clone https://github.com/<tu‑usuario>/dotfiles.git
+$ git clone https://github.com/TheJemv/dotfiles.git
 
 # 2. Sincroniza sólo la parte de Neovim (Stow, Chezmoi, o…)
 $ ln -s ~/dotfiles/.config/nvim ~/.config/nvim
