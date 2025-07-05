@@ -14,3 +14,5 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Mover a la ventana derecha" })
 
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Mover abajo" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Mover arriba" })
+
+vim.keymap.set("n", "<S-v>", ":vsplit<CR>", { desc = "Split ventana horizintal" })

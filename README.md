@@ -81,6 +81,7 @@ $ nvim
 | `<Tab>` / `<S-Tab>` | Normal | Siguiente / Anterior buffer              |
 | `<C-q>`             | Normal | **Eliminar** buffer (`:bdelete`)         |
 | `<C-w>h/j/k/l`      | Normal | Moverse entre *splits*                   |
+| `<S-v>`             | Normal | Abrir ventana horizontal                 |
 | `gd`                | Normal | Ir a **definición** (LSP)                |
 | `K`                 | Normal | **Hover** docs (LSP)                     |
 | `<leader>gf`        | Normal | **Formatear** archivo con null‑ls/LSP    |
