@@ -1,6 +1,6 @@
 # ✨ Dotfiles – Neovim (Lazy Setup)
 
-![Neovim con mi tema](./images/screenshot.jpg)
+![Neovim con mi tema](./images/screenshot.png)
 
 > **TL;DR**
 > Mi configuración de **Neovim 0.9+** usa [**lazy.nvim**](https://github.com/folke/lazy.nvim) como gestor de *plugins* y un pequeño puñado de módulos Lua hechos por mí.
