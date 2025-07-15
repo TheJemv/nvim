@@ -3,11 +3,13 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=3")
 vim.cmd("set softtabstop=3")
 vim.cmd("set shiftwidth=3")
+
 vim.g.mapleader = " "
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.foldenable = true
+vim.opt.fillchars:append({ eob = " " })
 
 
 -- Functions

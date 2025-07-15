@@ -1,5 +1,9 @@
 return {
    "goolord/alpha-nvim",
+   dependencies = {
+      "MaximilianLloyd/ascii.nvim",
+      "MunifTanjim/nui.nvim",
+   },
    config = function()
       local status_ok, alpha = pcall(require, "alpha")
       if not status_ok then
@@ -7,29 +11,21 @@ return {
       end
 
       local dashboard = require("alpha.themes.dashboard")
-      dashboard.section.header.val = {
-         [[          ▀████▀▄▄              ▄█ ]],
-         [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
-         [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
-         [[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
-         [[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
-         [[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
-         [[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
-         [[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
-         [[   █   █  █      ▄▄           ▄▀   ]],
-      }
+      local ascii = require("ascii")
+
+      dashboard.section.header.val = ascii.art.planets.planets.saturn_plus
 
       dashboard.section.buttons.val = {
-         dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-         dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-         dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-         dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-         dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.vim<CR>"),
-         dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+         dashboard.button("h", "  Recents", ":Telescope oldfiles<CR>"),
+         dashboard.button("b", "  Buffers", ":Telescope buffers<CR>"),
+         dashboard.button("y", "  Explore", ":NvimTreeToggle<CR>"),
+         dashboard.button("/", "  Ripgrep", ":Telescope live_grep<CR>"),
+         dashboard.button("v", "  Options", ":e $MYVIMRC<CR>"),
+         dashboard.button("P", "󰂖  Plugins", ":Lazy<CR>"),
       }
 
       local function footer()
-         return "Don't Stop Until You are Proud..."
+         return "Money never sleeps..."
       end
 
       dashboard.section.footer.val = footer()
